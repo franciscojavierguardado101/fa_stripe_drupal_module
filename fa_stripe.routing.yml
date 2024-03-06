@@ -1,0 +1,23 @@
+fa_stripe.settings:
+  path: '/admin/config/stripe'
+  defaults:
+    _form: '\Drupal\fa_stripe\Form\StripeSettingsForm'
+    _title: 'FA Stripe Settings'
+  requirements:
+    _permission: 'administer stripe'
+
+fa_stripe.payment:
+  path: '/payment/{sid}'
+  defaults:
+    _controller: '\Drupal\fa_stripe\Controller\FaStripePayment::createCheckout'
+    _title: 'FA Stripe Settings'
+  requirements:
+    _permission: 'access content'
+fa_stripe.webhook:
+  path: '/fa-stripe/webhook'
+  methods: [POST]
+  defaults:
+    _controller: '\Drupal\fa_stripe\Controller\StripeWebhookController::handle'
+  requirements:
+    _access: 'TRUE'
+

@@ -1,0 +1,5 @@
+name: FA Stripe Payment
+type: module
+description: An implementation of Stripe module to integrate Webform with Stripe payment element.
+package: FA
+core_version_requirement: ^9 || ^10

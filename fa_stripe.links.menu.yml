@@ -1,0 +1,5 @@
+fa_stripe.settings:
+  title: 'FA - Stripe'
+  route_name: fa_stripe.settings
+  description: 'FA Stripe General Configuration'
+  parent: fa.global_index

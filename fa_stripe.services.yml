@@ -1,0 +1,4 @@
+services:
+  fa_stripe.service:
+    class: Drupal\fa_stripe\FaStripeService
+    arguments: ['@logger.factory', '@config.factory']
